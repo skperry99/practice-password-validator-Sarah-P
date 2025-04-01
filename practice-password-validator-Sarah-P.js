@@ -20,3 +20,39 @@ know they have been successful
 ○ If the password does NOT meet the requirements, a statement to let
 the user know their password does not meet the requirements
 */
+
+const readline = require('readline-sync');
+let passwordCheck = false;
+
+do {
+    let input = readline.question("Please enter a password: \n");
+
+    let lengthCheck = (input.length >= 8);
+    let upperCaseCheck = !(input === input.toLowerCase());
+    let numCheck = false;
+
+    for (let i = 0; i < input.length; i++) {
+        if (!isNaN(input[i])) {
+        numCheck = true;}
+    }; 
+
+    if (!(lengthCheck&&upperCaseCheck&&numCheck)){
+        console.log("Your password does not meet the requirements.")
+        let passwordCheck = false;
+    }
+    else {
+        console.log("Password successful!");
+        let passwordCheck = true;
+    }
+} while (passwordCheck === false);
+
+
+  /*
+  let i = 0;
+  while (numCheck == false && i < input.lenth){
+    if (!isNaN(str[i])) {
+      numCheck = true;
+    } 
+      i++;
+  }; 
+  */
