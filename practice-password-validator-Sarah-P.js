@@ -38,21 +38,10 @@ do {
 
     if (!(lengthCheck&&upperCaseCheck&&numCheck)){
         console.log("Your password does not meet the requirements.")
-        let passwordCheck = false;
+        passwordCheck = false;
     }
     else {
         console.log("Password successful!");
-        let passwordCheck = true;
+        passwordCheck = true;
     }
 } while (passwordCheck === false);
-
-
-  /*
-  let i = 0;
-  while (numCheck == false && i < input.lenth){
-    if (!isNaN(str[i])) {
-      numCheck = true;
-    } 
-      i++;
-  }; 
-  */
